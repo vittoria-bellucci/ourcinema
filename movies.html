@@ -51,6 +51,129 @@ our movie diary ♡
     transform:translateY(-3px);
 
 }
+
+    .form-popup {
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    rgba(0,0,0,0.55);
+
+    backdrop-filter:blur(8px);
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:10;
+
+}
+
+
+
+.form-card {
+
+    width:320px;
+
+    padding:30px;
+
+    border-radius:25px;
+
+
+    background:
+
+    rgba(255,255,255,0.1);
+
+
+    border:
+
+    1px solid rgba(255,255,255,0.2);
+
+
+    backdrop-filter:blur(20px);
+
+}
+
+
+
+.form-card h2 {
+
+    font-family:Georgia,serif;
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+
+
+.form-card input,
+
+.form-card textarea {
+
+
+    width:100%;
+
+    margin-bottom:12px;
+
+    padding:12px;
+
+
+    border:none;
+
+    outline:none;
+
+
+    border-radius:10px;
+
+
+    background:
+
+    rgba(255,255,255,0.1);
+
+
+    color:white;
+
+}
+
+
+
+.form-card textarea {
+
+    height:90px;
+
+    resize:none;
+
+}
+
+#saveMovie {
+
+    width:100%;
+
+    padding:13px;
+
+
+    border-radius:50px;
+
+
+    border:none;
+
+
+    background:#302a43;
+
+
+    color:white;
+
+
+    cursor:pointer;
+
+}
     
 body {
 
@@ -296,7 +419,56 @@ little films, little memories
 <button id="addMovieBtn">
 + add movie memory ♡
 </button>
-    
+   <div id="movieForm" class="form-popup">
+
+
+    <div class="form-card">
+
+
+        <h2>
+        new memory ♡
+        </h2>
+
+
+        <input 
+        id="movieTitle"
+        placeholder="movie title..."
+        >
+
+
+        <input 
+        id="movieYear"
+        placeholder="year..."
+        >
+
+
+        <input 
+        id="movieGenre"
+        placeholder="genre..."
+        >
+
+
+        <input 
+        id="movieRating"
+        placeholder="rating (1-5)..."
+        >
+
+
+        <textarea
+        id="movieNote"
+        placeholder="our little memory..."
+        ></textarea>
+
+
+        <button id="saveMovie">
+        save memory ✦
+        </button>
+
+
+    </div>
+
+
+</div> 
 </header>
 
 
