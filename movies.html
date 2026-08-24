@@ -11,13 +11,26 @@ our movie diary ♡
 
 <style>
 
+* {
+    box-sizing:border-box;
+}
+
+
 body {
 
     margin:0;
 
     min-height:100vh;
 
+    padding:40px;
+
     background:
+
+    radial-gradient(
+        circle at top,
+        rgba(255,255,255,0.12),
+        transparent 25%
+    ),
 
     linear-gradient(
         160deg,
@@ -26,84 +39,145 @@ body {
         #26213a
     );
 
-    color:white;
+
+    color:#f5f1f4;
 
     font-family:Arial,sans-serif;
 
-    padding:40px;
+}
+
+
+
+header {
+
+    text-align:center;
+
+    margin-bottom:50px;
 
 }
+
 
 
 h1 {
 
     font-family:Georgia,serif;
 
-    text-align:center;
+    font-size:38px;
 
-    font-size:35px;
+    font-weight:normal;
 
 }
+
 
 
 .subtitle {
 
-    text-align:center;
-
     color:#aaa0ae;
 
-    letter-spacing:3px;
+    letter-spacing:4px;
 
-    font-size:12px;
+    font-size:11px;
+
+    text-transform:uppercase;
 
 }
 
 
 
-.movie-list {
+.diary {
 
     max-width:700px;
 
-    margin:40px auto;
+    margin:auto;
 
 }
 
 
 
-.movie {
+.entry {
 
     background:
 
     rgba(255,255,255,0.07);
 
+
     border:
 
-    1px solid rgba(255,255,255,0.1);
+    1px solid rgba(255,255,255,0.15);
+
 
     border-radius:20px;
 
-    padding:25px;
 
-    margin-bottom:20px;
+    padding:30px;
+
+
+    margin-bottom:25px;
+
 
     backdrop-filter:blur(15px);
 
+
+    position:relative;
+
 }
 
 
 
-.movie h2 {
+.film {
+
+    font-size:45px;
+
+}
+
+
+
+.title {
 
     font-family:Georgia,serif;
 
+    font-size:28px;
+
+    margin-top:15px;
+
 }
 
 
-.movie p {
+
+.details {
 
     color:#aaa0ae;
 
+    font-size:13px;
+
+    margin-top:10px;
+
 }
+
+
+
+.note {
+
+    margin-top:20px;
+
+    font-style:italic;
+
+    color:#d5ccd8;
+
+}
+
+
+
+.stars {
+
+    position:absolute;
+
+    top:25px;
+
+    right:30px;
+
+}
+
 
 
 </style>
@@ -116,59 +190,96 @@ h1 {
 <body>
 
 
+
+<header>
+
 <h1>
 our movie diary ♡
 </h1>
 
 
 <div class="subtitle">
-movies we've watched together
+little films, little memories
 </div>
 
 
-
-<div class="movie-list">
-
-
-<div class="movie">
-
-<h2>
-🎬 Interstellar
-</h2>
+</header>
 
 
-<p>
+
+
+<div class="diary">
+
+
+
+<div class="entry">
+
+
+<div class="film">
+🎞️
+</div>
+
+
+<div class="stars">
+★★★★★
+</div>
+
+
+<div class="title">
+Interstellar
+</div>
+
+
+<div class="details">
 2014 · sci-fi · watched together
-</p>
+</div>
 
 
-<p>
+<div class="note">
+
 "our little midnight adventure ✦"
-</p>
+
+</div>
 
 
 </div>
 
 
 
-<div class="movie">
-
-<h2>
-🎬 Your Name
-</h2>
 
 
-<p>
+<div class="entry">
+
+
+<div class="film">
+🎞️
+</div>
+
+
+<div class="stars">
+★★★★☆
+</div>
+
+
+<div class="title">
+Your Name
+</div>
+
+
+<div class="details">
 2016 · anime · watched together
-</p>
+</div>
 
 
-<p>
-"one of our favorites ♡"
-</p>
+<div class="note">
+
+"one of our comfort movies ♡"
+
+</div>
 
 
 </div>
+
 
 
 </div>
