@@ -308,6 +308,38 @@ Sore: Istri Dari Masa Depan
 
 
 
+<script type="module">
+
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-app.js";
+
+import { getDatabase } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-database.js";
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyCG36ouSfSMzwqG0DximpScogU6_yTFmFA",
+  authDomain: "our-little-cinema-6b571.firebaseapp.com",
+  databaseURL: "https://our-little-cinema-6b571-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "our-little-cinema-6b571",
+  storageBucket: "our-little-cinema-6b571.firebasestorage.app",
+  messagingSenderId: "430832212730",
+  appId: "1:430832212730:web:c2f3b854d4f70c330e8743",
+  measurementId: "G-YQF7XPK125"
+};
+
+    
+
+const app = initializeApp(firebaseConfig);
+
+
+const database = getDatabase(app);
+
+
+console.log("firebase connected 🌙");
+
+
+</script>
+
+
 </body>
 
 </html>
