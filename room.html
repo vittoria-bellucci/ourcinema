@@ -520,11 +520,17 @@ header {
 
 <div class="browser-bar">
 
-<span class="browser-button">←</span>
+<button class="browser-button" onclick="goBack()">
+←
+</button>
 
-<span class="browser-button">→</span>
+<button class="browser-button" onclick="goForward()">
+→
+</button>
 
-<span class="browser-button">↻</span>
+<button class="browser-button" onclick="refreshPage()">
+↻
+</button>
 
 
 <input
@@ -682,6 +688,31 @@ function openWebsite(event) {
     }
 
 }
+
+
+
+function goBack(){
+
+    document.getElementById("browserFrame").contentWindow.history.back();
+
+}
+
+
+
+function goForward(){
+
+    document.getElementById("browserFrame").contentWindow.history.forward();
+
+}
+
+
+
+function refreshPage(){
+
+    document.getElementById("browserFrame").contentWindow.location.reload();
+
+}
+
 
 </script>
 
