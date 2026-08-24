@@ -1,77 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>our little cinema ♡</title>
 
     <style>
-        body {
-            margin: 0;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: #f8e8ee;
-            font-family: Georgia, serif;
-            color: #5b4149;
+
+        @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400&display=swap');
+
+        * {
+            box-sizing: border-box;
         }
+
+        body {
+
+            margin: 0;
+
+            min-height: 100vh;
+
+            overflow: hidden;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            background:
+                radial-gradient(
+                    circle at 50% 40%,
+                    #28233d 0%,
+                    #171527 45%,
+                    #0c0b15 100%
+                );
+
+            color: #f7f2f5;
+
+            font-family: 'Inter', sans-serif;
+
+            position: relative;
+
+        }
+
+
+        /* moon */
+
+        .moon {
+
+            position: absolute;
+
+            width: 120px;
+
+            height: 120px;
+
+            border-radius: 50%;
+
+            background: #eee8e0;
+
+            top: 10%;
+
+            right: 15%;
+
+            box-shadow:
+                0 0 40px rgba(238, 232, 224, 0.18),
+                0 0 100px rgba(238, 232, 224, 0.08);
+
+        }
+
+
+        /* stars */
+
+        .star {
+
+            position: absolute;
+
+            width: 3px;
+
+            height: 3px;
+
+            background: #ffffff;
+
+            border-radius: 50%;
+
+            opacity: 0.7;
+
+            animation: twinkle 3s infinite ease-in-out;
+
+        }
+
+        .star:nth-child(1) {
+            top: 15%;
+            left: 12%;
+        }
+
+        .star:nth-child(2) {
+            top: 28%;
+            left: 22%;
+            animation-delay: 1s;
+        }
+
+        .star:nth-child(3) {
+            top: 12%;
+            left: 48%;
+            animation-delay: 2s;
+        }
+
+        .star:nth-child(4) {
+            top: 35%;
+            left: 78%;
+            animation-delay: 1.5s;
+        }
+
+        .star:nth-child(5) {
+            top: 20%;
+            left: 88%;
+            animation-delay: 0.5s;
+        }
+
+        .star:nth-child(6) {
+            top: 70%;
+            left: 10%;
+            animation-delay: 1.2s;
+        }
+
+        .star:nth-child(7) {
+            top: 80%;
+            left: 85%;
+            animation-delay: 2.2s;
+        }
+
+
+        @keyframes twinkle {
+
+            0%, 100% {
+                opacity: 0.25;
+                transform: scale(0.8);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.4);
+            }
+
+        }
+
+
+        /* main content */
 
         .cinema {
+
             text-align: center;
-            padding: 40px;
+
+            position: relative;
+
+            z-index: 5;
+
+            padding: 30px;
+
+            max-width: 700px;
+
         }
 
-        .heart {
-            font-size: 50px;
-            margin-bottom: 20px;
+
+        .small-title {
+
+            font-size: 12px;
+
+            letter-spacing: 5px;
+
+            text-transform: uppercase;
+
+            color: #b9adbd;
+
+            margin-bottom: 25px;
+
         }
+
 
         h1 {
-            font-size: 48px;
-            font-weight: normal;
-            margin: 0 0 15px;
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: clamp(55px, 9vw, 100px);
+
+            font-weight: 400;
+
+            letter-spacing: -2px;
+
+            margin: 0;
+
+            line-height: 0.9;
+
+            text-shadow:
+                0 0 30px rgba(255, 255, 255, 0.08);
+
         }
 
-        p {
-            font-size: 18px;
+
+        .subtitle {
+
+            font-family: 'Cormorant Garamond', serif;
+
+            font-size: 23px;
+
             font-style: italic;
-            margin-bottom: 30px;
+
+            color: #c9bfcb;
+
+            margin-top: 28px;
+
+            margin-bottom: 40px;
+
         }
 
-        button {
-            border: none;
-            padding: 15px 30px;
-            border-radius: 30px;
-            background: #ffffff;
-            color: #5b4149;
-            font-family: Georgia, serif;
-            font-size: 16px;
+
+        /* button */
+
+        .enter-button {
+
+            display: inline-block;
+
+            padding: 16px 38px;
+
+            border: 1px solid rgba(255,255,255,0.25);
+
+            border-radius: 100px;
+
+            background: rgba(255,255,255,0.06);
+
+            color: #f8f4f7;
+
+            font-family: 'Inter', sans-serif;
+
+            font-size: 12px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            text-decoration: none;
+
+            backdrop-filter: blur(10px);
+
+            transition: all 0.4s ease;
+
             cursor: pointer;
+
         }
 
-        button:hover {
-            transform: scale(1.05);
+
+        .enter-button:hover {
+
+            background: rgba(255,255,255,0.14);
+
+            border-color: rgba(255,255,255,0.5);
+
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 40px rgba(0,0,0,0.3);
+
         }
+
+
+        .footer {
+
+            margin-top: 55px;
+
+            font-size: 11px;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color: #716875;
+
+        }
+
+
+        /* little glow */
+
+        .glow {
+
+            position: absolute;
+
+            width: 500px;
+
+            height: 500px;
+
+            border-radius: 50%;
+
+            background: rgba(111, 88, 135, 0.12);
+
+            filter: blur(80px);
+
+            left: 50%;
+
+            top: 50%;
+
+            transform: translate(-50%, -50%);
+
+            z-index: 0;
+
+        }
+
+
+        /* mobile */
+
+        @media (max-width: 600px) {
+
+            .moon {
+
+                width: 80px;
+
+                height: 80px;
+
+                right: 10%;
+
+                top: 8%;
+
+            }
+
+            .subtitle {
+
+                font-size: 20px;
+
+            }
+
+        }
+
     </style>
+
 </head>
+
 
 <body>
 
-    <div class="cinema">
 
-        <div class="heart">♡</div>
+    <div class="glow"></div>
 
-        <h1>our little cinema</h1>
 
-        <p>just you, me & whatever we're watching tonight.</p>
+    <div class="moon"></div>
 
-        <button onclick="alert('movie night? ♡')">
+
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+    <div class="star"></div>
+
+
+    <main class="cinema">
+
+        <div class="small-title">
+            welcome to
+        </div>
+
+
+        <h1>
+            our little cinema
+        </h1>
+
+
+        <div class="subtitle">
+            just you, me & whatever we're watching tonight.
+        </div>
+
+
+        <a href="#" class="enter-button"
+           onclick="alert('our movie night begins here ♡')">
+
             enter our cinema
-        </button>
 
-    </div>
+        </a>
+
+
+        <div class="footer">
+            ♡ a little corner of the internet made for two ♡
+        </div>
+
+    </main>
+
 
 </body>
+
 </html>
