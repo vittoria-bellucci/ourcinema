@@ -3,393 +3,234 @@
 
 <head>
 
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>our cinema — room ♡</title>
+<title>our cinema — room ♡</title>
 
 
-    <style>
+<style>
 
-        * {
-            box-sizing: border-box;
-        }
+* {
+    box-sizing: border-box;
+}
 
 
-        body {
+body {
 
-            margin: 0;
+    margin: 0;
 
-            min-height: 100vh;
+    min-height: 100vh;
 
-            background:
-                radial-gradient(
-                    circle at 50% 20%,
-                    #26213a 0%,
-                    #151321 45%,
-                    #090911 100%
-                );
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            #26213a 0%,
+            #151321 45%,
+            #090911 100%
+        );
 
-            color: #f5f1f4;
+    color: #f5f1f4;
 
-            font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
 
-        }
+}
 
 
-        /* top bar */
+/* top bar */
 
-        header {
+header {
 
-            height: 70px;
+    height: 70px;
 
-            display: flex;
+    display: flex;
 
-            align-items: center;
+    align-items: center;
 
-            justify-content: space-between;
+    justify-content: space-between;
 
-            padding: 0 30px;
+    padding: 0 30px;
 
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 
-            background: rgba(10,9,18,0.7);
+    background: rgba(10,9,18,0.7);
 
-            backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
 
-        }
+}
 
 
-        .logo {
+.logo {
 
-            font-family: Georgia, serif;
+    font-family: Georgia, serif;
 
-            font-size: 22px;
+    font-size: 22px;
 
-        }
+}
 
 
-        .room-name {
+.room-name {
 
-            font-size: 12px;
+    font-size: 12px;
 
-            letter-spacing: 3px;
+    letter-spacing: 3px;
 
-            text-transform: uppercase;
+    text-transform: uppercase;
 
-            color: #aaa0ae;
+    color: #aaa0ae;
 
-        }
+}
 
 
-        /* main layout */
 
-        .room {
+/* layout */
 
-            display: grid;
+.room {
 
-            grid-template-columns: 1fr 320px;
+    display: grid;
 
-            min-height: calc(100vh - 70px);
+    grid-template-columns: 1fr 320px;
 
-        }
+    min-height: calc(100vh - 70px);
 
+}
 
-        /* browser */
 
-        .browser {
 
-            padding: 25px;
+/* browser */
 
-            display: flex;
+.browser {
 
-            flex-direction: column;
+    padding: 25px;
 
-        }
+    display: flex;
 
+    flex-direction: column;
 
-        .browser-bar {
+}
 
-            height: 50px;
 
-            display: flex;
+.browser-bar {
 
-            align-items: center;
+    height: 50px;
 
-            gap: 10px;
+    display: flex;
 
-            padding: 8px 12px;
+    align-items: center;
 
-            background: rgba(255,255,255,0.06);
+    gap: 10px;
 
-            border: 1px solid rgba(255,255,255,0.08);
+    padding: 8px 12px;
 
-            border-radius: 12px 12px 0 0;
+    background: rgba(255,255,255,0.06);
 
-        }
+    border: 1px solid rgba(255,255,255,0.08);
 
+    border-radius: 12px 12px 0 0;
 
-        .browser-button {
+}
 
-            color: #aaa;
 
-            font-size: 14px;
+.browser-button {
 
-        }
+    color: #aaa;
 
+    font-size: 14px;
 
-        .url-bar {
+}
 
-            flex: 1;
 
-            height: 32px;
+.url-bar {
 
-            border: none;
+    flex: 1;
 
-            outline: none;
+    height: 32px;
 
-            border-radius: 8px;
+    border: none;
 
-            padding: 0 14px;
+    outline: none;
 
-            background: rgba(255,255,255,0.07);
+    border-radius: 8px;
 
-            color: white;
+    padding: 0 14px;
 
-            font-size: 13px;
+    background: rgba(255,255,255,0.07);
 
-        }
+    color: white;
 
+    font-size: 13px;
 
-        .screen {
+}
 
-            flex: 1;
 
-            min-height: 500px;
 
-            display: flex;
+/* screen */
 
-            align-items: center;
+.screen {
 
-            justify-content: center;
+    flex: 1;
 
-            text-align: center;
+    min-height: 500px;
 
-            background: rgba(0,0,0,0.35);
+    display: flex;
 
-            border: 1px solid rgba(255,255,255,0.08);
+    align-items: center;
 
-            border-top: none;
+    justify-content: center;
 
-            border-radius: 0 0 12px 12px;
+    text-align: center;
 
-        }
+    background: rgba(0,0,0,0.35);
 
+    border: 1px solid rgba(255,255,255,0.08);
 
-        .screen-content {
+    border-top: none;
 
-            color: #8f8792;
+    border-radius: 0 0 12px 12px;
 
-        }
+}
 
 
-        .screen-icon {
+.screen-content {
 
-            font-size: 45px;
+    color: #8f8792;
 
-            margin-bottom: 15px;
+}
 
-        }
 
+.movie-poster {
 
-        .screen-title {
+    font-size: 70px;
 
-            font-family: Georgia, serif;
+    margin-bottom: 20px;
 
-            font-size: 25px;
+}
 
-            color: #ddd5dc;
 
-        }
+.screen-icon {
 
+    font-size: 45px;
 
-        /* sidebar */
+    margin-bottom: 15px;
 
-        .sidebar {
+}
 
-            border-left: 1px solid rgba(255,255,255,0.08);
 
-            background: rgba(10,9,18,0.5);
+.screen-title {
 
-            display: flex;
+    font-family: Georgia, serif;
 
-            flex-direction: column;
+    font-size: 25px;
 
-        }
+    color: #ddd5dc;
 
+}
 
-        .people {
 
-            padding: 25px;
 
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+/* movie button */
 
-        }
-
-
-        .section-title {
-
-            font-size: 10px;
-
-            letter-spacing: 3px;
-
-            text-transform: uppercase;
-
-            color: #817783;
-
-            margin-bottom: 20px;
-
-        }
-
-
-        .person {
-
-            display: flex;
-
-            align-items: center;
-
-            gap: 12px;
-
-            margin-bottom: 15px;
-
-        }
-
-
-        .avatar {
-
-            width: 35px;
-
-            height: 35px;
-
-            border-radius: 50%;
-
-            display: flex;
-
-            align-items: center;
-
-            justify-content: center;
-
-            background: #302a43;
-
-        }
-
-
-        .online {
-
-            width: 7px;
-
-            height: 7px;
-
-            border-radius: 50%;
-
-            background: #a8c6a1;
-
-            margin-left: auto;
-
-        }
-
-
-        /* chat */
-
-        .chat {
-
-            flex: 1;
-
-            padding: 25px;
-
-            display: flex;
-
-            flex-direction: column;
-
-        }
-
-
-        .messages {
-
-            flex: 1;
-
-            color: #aaa0ae;
-
-            font-size: 13px;
-
-            line-height: 1.7;
-
-        }
-
-
-        .message {
-
-            margin-bottom: 15px;
-
-        }
-
-
-        .message strong {
-
-            color: #ddd5dc;
-
-        }
-
-
-        .chat-input {
-
-            display: flex;
-
-            gap: 8px;
-
-        }
-
-
-        .chat-input input {
-
-            flex: 1;
-
-            border: none;
-
-            outline: none;
-
-            border-radius: 8px;
-
-            padding: 11px;
-
-            background: rgba(255,255,255,0.07);
-
-            color: white;
-
-        }
-
-
-        .chat-input button {
-
-            border: none;
-
-            border-radius: 8px;
-
-            padding: 0 15px;
-
-            background: #302a43;
-
-            color: white;
-
-            cursor: pointer;
-
-        }
-
-        <button class="movie-button">
-    add movie
-</button>
-        
 .movie-button {
 
     margin-top: 20px;
@@ -426,39 +267,216 @@
     transform: translateY(-3px);
 
 }
-        
 
-        /* mobile */
 
-        @media (max-width: 800px) {
 
-            .room {
+/* sidebar */
 
-                grid-template-columns: 1fr;
+.sidebar {
 
-            }
+    border-left: 1px solid rgba(255,255,255,0.08);
 
-            .sidebar {
+    background: rgba(10,9,18,0.5);
 
-                border-left: none;
+    display: flex;
 
-                border-top: 1px solid rgba(255,255,255,0.08);
-
-                min-height: 400px;
-
-            }
-
-            .screen {
-
-                min-height: 400px;
-
-            }
-
-        }
-
-    </style>
+    flex-direction: column;
 
 }
+
+
+.people {
+
+    padding: 25px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+}
+
+
+.section-title {
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    color: #817783;
+
+    margin-bottom: 20px;
+
+}
+
+
+.person {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.avatar {
+
+    width: 35px;
+
+    height: 35px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #302a43;
+
+}
+
+
+.online {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #a8c6a1;
+
+    margin-left: auto;
+
+}
+
+
+
+/* chat */
+
+.chat {
+
+    flex: 1;
+
+    padding: 25px;
+
+    display: flex;
+
+    flex-direction: column;
+
+}
+
+
+.messages {
+
+    flex: 1;
+
+    color: #aaa0ae;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+}
+
+
+.message {
+
+    margin-bottom: 15px;
+
+}
+
+
+.message strong {
+
+    color: #ddd5dc;
+
+}
+
+
+.chat-input {
+
+    display: flex;
+
+    gap: 8px;
+
+}
+
+
+.chat-input input {
+
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 8px;
+
+    padding: 11px;
+
+    background: rgba(255,255,255,0.07);
+
+    color: white;
+
+}
+
+
+.chat-input button {
+
+    border: none;
+
+    border-radius: 8px;
+
+    padding: 0 15px;
+
+    background: #302a43;
+
+    color: white;
+
+    cursor: pointer;
+
+}
+
+
+
+/* mobile */
+
+@media (max-width: 800px) {
+
+    .room {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .sidebar {
+
+        border-left: none;
+
+        border-top: 1px solid rgba(255,255,255,0.08);
+
+        min-height: 400px;
+
+    }
+
+
+    .screen {
+
+        min-height: 400px;
+
+    }
+
+}
+
+
+</style>
 
 </head>
 
@@ -468,154 +486,182 @@
 
 <header>
 
-    <div class="logo">
-        our little cinema ♡
-    </div>
+<div class="logo">
+    our little cinema ♡
+</div>
 
-    <div class="room-name">
-        movie night
-    </div>
+
+<div class="room-name">
+    movie night
+</div>
 
 </header>
+
 
 
 <div class="room">
 
 
-    <!-- browser -->
-
-    <section class="browser">
+<section class="browser">
 
 
-        <div class="browser-bar">
+<div class="browser-bar">
 
-            <span class="browser-button">←</span>
+<span class="browser-button">←</span>
 
-            <span class="browser-button">→</span>
+<span class="browser-button">→</span>
 
-            <span class="browser-button">↻</span>
-
-
-            <input
-                class="url-bar"
-                placeholder="search or enter a website..."
-            >
-
-        </div>
+<span class="browser-button">↻</span>
 
 
-        <div class="screen">
+<input
+class="url-bar"
+placeholder="search or enter a website..."
+>
 
-            <div class="screen-content">
-
-    <div class="movie-poster">
-        🎬
-    </div>
-
-    <div class="screen-title">
-        tonight's movie
-    </div>
-
-    <p>
-        choose something beautiful to watch together ♡
-    </p>
-
-    <button class="movie-button">
-        add movie
-    </button>
 
 </div>
 
-        </div>
 
 
-    </section>
+<div class="screen">
 
 
-    <!-- sidebar -->
-
-    <aside class="sidebar">
+<div class="screen-content">
 
 
-        <div class="people">
-
-            <div class="section-title">
-                watching together
-            </div>
+<div class="movie-poster">
+🎬
+</div>
 
 
-            <div class="person">
-
-                <div class="avatar">
-                    ♡
-                </div>
-
-                <span>
-                    you
-                </span>
-
-                <div class="online"></div>
-
-            </div>
+<div class="screen-title">
+tonight's movie
+</div>
 
 
-            <div class="person">
-
-                <div class="avatar">
-                    ♡
-                </div>
-
-                <span>
-                    boyfriend
-                </span>
-
-                <div class="online"></div>
-
-            </div>
-
-        </div>
+<p>
+choose something beautiful to watch together ♡
+</p>
 
 
-        <div class="chat">
-
-            <div class="section-title">
-                little chat
-            </div>
+<button class="movie-button">
+add movie
+</button>
 
 
-            <div class="messages">
-
-                <div class="message">
-                    <strong>you</strong><br>
-                    movie night? ♡
-                </div>
+</div>
 
 
-                <div class="message">
-                    <strong>boyfriend</strong><br>
-                    always.
-                </div>
-
-            </div>
+</div>
 
 
-            <div class="chat-input">
-
-                <input
-                    type="text"
-                    placeholder="say something..."
-                >
-
-                <button>
-                    send
-                </button>
-
-            </div>
-
-        </div>
+</section>
 
 
-    </aside>
+
+
+<aside class="sidebar">
+
+
+<div class="people">
+
+
+<div class="section-title">
+watching together
+</div>
+
+
+<div class="person">
+
+<div class="avatar">
+♡
+</div>
+
+<span>
+you
+</span>
+
+<div class="online"></div>
+
+</div>
+
+
+
+<div class="person">
+
+<div class="avatar">
+♡
+</div>
+
+<span>
+boyfriend
+</span>
+
+<div class="online"></div>
+
+</div>
+
+
+</div>
+
+
+
+
+<div class="chat">
+
+
+<div class="section-title">
+little chat
+</div>
+
+
+<div class="messages">
+
+
+<div class="message">
+
+<strong>you</strong><br>
+
+movie night? ♡
+
+</div>
+
+
+<div class="message">
+
+<strong>boyfriend</strong><br>
+
+always.
+
+</div>
+
+
+</div>
+
+
+
+<div class="chat-input">
+
+
+<input
+type="text"
+placeholder="say something..."
+>
+
+
+<button>
+send
+</button>
+
+
+</div>
+
+
+</div>
+
+
+</aside>
 
 
 </div>
