@@ -60,11 +60,15 @@ our movie diary ♡
 
     inset:0;
 
-    z-index:10;
+    z-index:100;
 
     align-items:center;
 
     justify-content:center;
+
+    background:rgba(0,0,0,0.55);
+
+    backdrop-filter:blur(8px);
 
 }
 
@@ -145,20 +149,21 @@ our movie diary ♡
 
     padding:13px;
 
-
     border-radius:50px;
-
 
     border:none;
 
-
     background:#302a43;
-
 
     color:white;
 
-
     cursor:pointer;
+
+    position:relative;
+
+    z-index:999;
+
+    pointer-events:auto;
 
 }
     
@@ -550,9 +555,11 @@ addBtn.addEventListener("click", () => {
 const saveBtn = document.getElementById("saveMovie");
 
 
-saveBtn.addEventListener("click", () => {
+saveBtn.onclick = function(){
 
-    console.log("SAVE BUTTON WORKS 🌙");
+    alert("SAVE BUTTON WORKS 🌙");
+
+};
 
 
     const title = document.getElementById("movieTitle").value;
