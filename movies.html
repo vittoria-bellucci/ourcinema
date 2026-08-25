@@ -522,7 +522,6 @@ const firebaseConfig = {
   measurementId: "G-YQF7XPK125"
 };
 
-    
 
 const app = initializeApp(firebaseConfig);
 
@@ -531,6 +530,10 @@ const database = getDatabase(app);
 
 
 console.log("firebase connected 🌙");
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
 
 
 const addBtn = document.getElementById("addMovieBtn");
@@ -554,6 +557,8 @@ const saveBtn = document.getElementById("saveMovie");
 saveBtn.addEventListener("click", () => {
 
     console.log("SAVE BUTTON WORKS 🌙");
+
+});
 
 
 });
