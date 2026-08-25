@@ -409,38 +409,35 @@ little films, little memories
     
    <div id="movieForm" class="form-popup">
 
-
     <div class="form-card">
 
-
-        <h2>
-        new memory ♡
-        </h2>
-
+        <h2>new memory ♡</h2>
 
         <input 
         id="movieTitle"
+        type="text"
         placeholder="movie title..."
         >
 
-
         <input 
         id="movieYear"
+        type="text"
         placeholder="year..."
         >
 
-
         <input 
         id="movieGenre"
+        type="text"
         placeholder="genre..."
         >
 
-
         <input 
         id="movieRating"
-        placeholder="rating (1-5)..."
+        type="number"
+        placeholder="rating (1-5)"
+        min="1"
+        max="5"
         >
-
 
         <textarea
         id="movieNote"
@@ -448,15 +445,14 @@ little films, little memories
         ></textarea>
 
 
-        <button id="saveMovie" style="cursor:pointer;">
-save memory ✦
-</button>
+        <button id="saveMovie" type="button">
+            save memory ✦
+        </button>
 
 
     </div>
 
-
-</div> 
+</div>
 
 
     
@@ -555,11 +551,12 @@ addBtn.onclick = () => {
 const saveBtn = document.getElementById("saveMovie");
 
 
-saveBtn.onclick = () => {
+saveBtn.addEventListener("click", () => {
 
-    console.log("memory button clicked 🌙");
+    console.log("SAVE BUTTON WORKS 🌙");
 
-};
+
+});
 
 </script>
 
