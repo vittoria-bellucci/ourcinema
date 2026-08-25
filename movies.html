@@ -549,23 +549,30 @@ const database = getDatabase(app);
 
 console.log("firebase connected 🌙");
 
+
 const addBtn = document.getElementById("addMovieBtn");
 
 const form = document.getElementById("movieForm");
 
 
-console.log(addBtn);
-console.log(form);
-
-
 addBtn.onclick = () => {
 
-    console.log("button clicked 🌙");
+    console.log("opening memory form 🌙");
 
     form.style.display = "flex";
 
 };
 
+
+
+const saveBtn = document.getElementById("saveMovie");
+
+
+saveBtn.onclick = () => {
+
+    console.log("memory button clicked 🌙");
+
+};
 
 </script>
 
