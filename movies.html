@@ -469,9 +469,10 @@ little films, little memories
 
 
 </div> 
+
+
+    
 </header>
-
-
 
 
 <div class="diary">
@@ -546,6 +547,23 @@ const database = getDatabase(app);
 
 
 console.log("firebase connected 🌙");
+
+document.addEventListener("DOMContentLoaded", () => {
+
+
+const addBtn = document.getElementById("addMovieBtn");
+
+const form = document.getElementById("movieForm");
+
+
+addBtn.onclick = () => {
+
+    form.style.display = "flex";
+
+};
+
+
+});
 
 
 </script>
