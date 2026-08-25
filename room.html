@@ -62,11 +62,9 @@ body {
 
     width:100%;
 
-    min-height:500px;
+    min-height:0;
 
     border:none;
-
-    background:white;
 
     border-radius:0 0 12px 12px;
 
@@ -170,25 +168,28 @@ nav a:hover {
 
 .room {
 
-    display: grid;
+    display:grid;
 
-    grid-template-columns: 1fr 320px;
+    grid-template-columns:1fr 320px;
 
-    min-height: calc(100vh - 70px);
+    height:calc(100vh - 70px);
+
+    overflow:hidden;
 
 }
-
 
 
 /* browser */
 
 .browser {
 
-    padding: 25px;
+    padding:25px;
 
-    display: flex;
+    display:flex;
 
-    flex-direction: column;
+    flex-direction:column;
+
+    min-height:0;
 
 }
 
@@ -390,6 +391,8 @@ nav a:hover {
 
     flex-direction: column;
 
+    overflow:hidden;
+
 }
 
 
@@ -482,13 +485,9 @@ nav a:hover {
 
 .messages {
 
-    flex: 1;
+    flex:1;
 
-    color: #aaa0ae;
-
-    font-size: 13px;
-
-    line-height: 1.7;
+    overflow-y:auto;
 
 }
 
