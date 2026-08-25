@@ -419,6 +419,7 @@ little films, little memories
 <button id="addMovieBtn">
 + add movie memory ♡
 </button>
+    
    <div id="movieForm" class="form-popup">
 
 
@@ -548,22 +549,22 @@ const database = getDatabase(app);
 
 console.log("firebase connected 🌙");
 
-document.addEventListener("DOMContentLoaded", () => {
-
-
 const addBtn = document.getElementById("addMovieBtn");
 
 const form = document.getElementById("movieForm");
 
 
+console.log(addBtn);
+console.log(form);
+
+
 addBtn.onclick = () => {
+
+    console.log("button clicked 🌙");
 
     form.style.display = "flex";
 
 };
-
-
-});
 
 
 </script>
