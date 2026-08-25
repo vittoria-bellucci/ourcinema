@@ -827,12 +827,40 @@ function openWebsite(event){
     if(event.key === "Enter"){
 
 
-        let url = urlBar.value;
+        let input = urlBar.value.trim();
 
 
-        if(!url.startsWith("http")){
+        if(input === ""){
+            return;
+        }
 
-            url = "https://duckduckgo.com/?q=" + url;
+
+        let url;
+
+
+        if(
+            input.includes(".com") ||
+            input.includes(".net") ||
+            input.includes(".org") ||
+            input.startsWith("http")
+        ){
+
+            if(!input.startsWith("http")){
+
+                url = "https://" + input;
+
+            } else {
+
+                url = input;
+
+            }
+
+
+        } else {
+
+
+            url = "https://duckduckgo.com/?q=" + encodeURIComponent(input);
+
 
         }
 
@@ -841,30 +869,6 @@ function openWebsite(event){
 
 
     }
-
-}
-
-
-
-function goBack(){
-
-    frame.contentWindow.history.back();
-
-}
-
-
-
-function goForward(){
-
-    frame.contentWindow.history.forward();
-
-}
-
-
-
-function refreshPage(){
-
-    frame.src = frame.src;
 
 }
 </script>
