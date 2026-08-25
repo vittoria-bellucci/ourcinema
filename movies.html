@@ -60,20 +60,13 @@ our movie diary ♡
 
     inset:0;
 
-    background:
-
-    rgba(0,0,0,0.55);
-
-    backdrop-filter:blur(8px);
+    z-index:10;
 
     align-items:center;
 
     justify-content:center;
 
-    z-index:10;
-
 }
-
 
 
 .form-card {
@@ -84,18 +77,12 @@ our movie diary ♡
 
     border-radius:25px;
 
-
     background:
-
     rgba(255,255,255,0.1);
 
+    position:relative;
 
-    border:
-
-    1px solid rgba(255,255,255,0.2);
-
-
-    backdrop-filter:blur(20px);
+    z-index:20;
 
 }
 
@@ -461,9 +448,9 @@ little films, little memories
         ></textarea>
 
 
-        <button id="saveMovie">
-        save memory ✦
-        </button>
+        <button id="saveMovie" style="cursor:pointer;">
+save memory ✦
+</button>
 
 
     </div>
