@@ -525,7 +525,6 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
-
 const database = getDatabase(app);
 
 
@@ -533,21 +532,18 @@ console.log("firebase connected 🌙");
 
 
 
-document.addEventListener("DOMContentLoaded", () => {
-
-
 const addBtn = document.getElementById("addMovieBtn");
 
 const form = document.getElementById("movieForm");
 
 
-addBtn.onclick = () => {
+addBtn.addEventListener("click", () => {
 
     console.log("opening memory form 🌙");
 
     form.style.display = "flex";
 
-};
+});
 
 
 
@@ -558,7 +554,26 @@ saveBtn.addEventListener("click", () => {
 
     console.log("SAVE BUTTON WORKS 🌙");
 
-});
+
+    const title = document.getElementById("movieTitle").value;
+
+    const year = document.getElementById("movieYear").value;
+
+    const genre = document.getElementById("movieGenre").value;
+
+    const rating = document.getElementById("movieRating").value;
+
+    const note = document.getElementById("movieNote").value;
+
+
+
+    console.log({
+        title,
+        year,
+        genre,
+        rating,
+        note
+    });
 
 
 });
